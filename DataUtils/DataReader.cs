@@ -66,7 +66,7 @@ namespace SpargoApp.DataUtils
             GetStringValueFromUser(out string address, "Введите адрес аптеки", "Поле не должно быть пустым");
             pharmacy.Address = address;
 
-            GetStringValueFromUser(out string phone, "Введите телефон аптеки", "Поле не должно быть пустым");
+            GetStringValueFromUser(out string phone, "Введите телефон аптеки", "Формат номера: +X (XXX) XXX-XX-XX", @"^\+[1-9]{1}\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}$");
             pharmacy.Phone = phone;
 
             return pharmacy;
